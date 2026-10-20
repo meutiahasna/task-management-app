@@ -1,32 +1,15 @@
-# React + TypeScript + Vite
+# Praktikum: Task Management App (Level 1 dan 2)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<img width="511" height="310" alt="image" src="https://github.com/user-attachments/assets/fa35903e-2afc-46e5-a088-ae83453454c4" />
+<img width="513" height="389" alt="image" src="https://github.com/user-attachments/assets/6d9bf494-2065-4f3a-8c27-13c720c3ad06" />
 
-Currently, two official plugins are available:
+## Refleksi:
+**Apa perbedaan antara props, state, dan context?**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Props adalah data yang dikirim dari Parent ke Child, yang mengalir satu arah dan bersifat read-only.
+- State adalah data di dalam komponen yang bisa berubah dan membuat tampilan ikut berubah.
+- Context adalah data yang dibagikan ke semua komponen tanpa meneruskan props satu per satu. 
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+**Kapan kita perlu menggunakan useEffect dibandingkan mengubah state langsung?**
+- Ubah state langsung saat ada interaksi pengguna seperti klik tombol atau ketik di input.
+- Pake useEffect saat ada proses sinkronisasi dengan sistem di luar React seperti koneksi ke server, ambil data dari API, simpan data otomatis ke localStorage.
